@@ -31,9 +31,9 @@ function App() {
           <PrivateRoute path="/administrator">
             <Administrator/>
           </PrivateRoute>
-          <Route path="/order">
+          <PrivateRoute path="/order">
             <Order/>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <h1>404 - Not Found!</h1>
           </Route>
