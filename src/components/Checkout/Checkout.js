@@ -20,7 +20,7 @@ const Checkout = () => {
 
     const handleCheckOut = () => {
         const {email} = loggedInUser
-        const orderedInfo = {name, price, quantity, email}
+        const orderedInfo = {name, price, email, ...loggedInUser, orderTime: new Date()}
         const url = `https://blueberry-custard-81521.herokuapp.com/addedProduct`
         fetch(url, {
             method: "POST",
