@@ -7,8 +7,8 @@ const getCurrentDate = () => {
 }
 const Footer = () => {
     return (
-        <div className="container App footer mt-2 text-danger">
-            <p>© All rights reserved by Computer Villa. {getCurrentDate()}</p>
+        <div className="container App footer mt-2 text-success font-weight: bold">
+            <p><strong>© All rights reserved by Computer Villa.</strong> {getCurrentDate()}</p>
         </div>
     );
 };

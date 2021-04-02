@@ -48,10 +48,7 @@ const AddProduct = () => {
 
     return (
         <div className="container row">
-            <div className="col-md-6">
-                <h2>Computer Villa</h2>
-            </div>
-            <div className="col-md-6">
+            <div className="col-md-9">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <h3>Product Name</h3>
                 <input name="name" placeholder="Add New Product" ref={register} />
