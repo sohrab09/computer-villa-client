@@ -31,7 +31,7 @@ function App() {
           <PrivateRoute path="/administrator">
             <Administrator/>
           </PrivateRoute>
-          <Route>
+          <Route path="/order">
             <Order/>
           </Route>
           <Route path="*">

@@ -34,28 +34,6 @@ export const googleSignIn = () => {
         });
 }
 
-export const gitHubSignIn = () => {
-    const gitHubProvider = new firebase.auth.GithubAuthProvider();
-    return firebase
-        .auth()
-        .signInWithPopup(gitHubProvider)
-        .then((res) => {
-            const { displayName, email, photoURL } = res.user;
-            const signedInUser = {
-                isSignIn: true,
-                userName: displayName,
-                email,
-                imgSrc: photoURL
-            };
-            return signedInUser;
-
-        }).catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
-        });
-}
-
 export const createUserWithEmailAndPassword = (name, email, password) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((res) => {
