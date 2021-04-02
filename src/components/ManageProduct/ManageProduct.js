@@ -8,7 +8,7 @@ class ManageProduct extends React.Component {
 
     handleDelete = (id) => {
         if(window.confirm("Do you want to delete this item")){
-            fetch('http://localhost:5000/delete/' + id, {
+            fetch('https://blueberry-custard-81521.herokuapp.com/delete/' + id, {
             method: "GET"
         }
 
@@ -28,7 +28,7 @@ class ManageProduct extends React.Component {
     }
 
     useEffect = () => {
-        fetch('http://localhost:5000/products')
+        fetch('https://blueberry-custard-81521.herokuapp.com/products')
             .then(res => res.json())
             .then(data => this.setState({
                 products: data

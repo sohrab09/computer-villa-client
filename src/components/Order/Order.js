@@ -13,7 +13,7 @@ const Order = () => {
 
     useEffect(() => {
         console.log(email)
-        fetch(`http://localhost:5000/orderProduct/${email}`)
+        fetch(`https://blueberry-custard-81521.herokuapp.com/orderProduct/${email}`)
             .then(res => res.json())
             .then(data => filteredOrder(data))
     }, [])

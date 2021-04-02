@@ -13,7 +13,7 @@ const Checkout = () => {
     const {name, price, quantity} = product
 
     useEffect(() => {
-        fetch(`http://localhost:5000/checkout/${id}`)
+        fetch(`https://blueberry-custard-81521.herokuapp.com/checkout/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
@@ -21,7 +21,7 @@ const Checkout = () => {
     const handleCheckOut = () => {
         const {email} = loggedInUser
         const orderedInfo = {name, price, quantity, email}
-        const url = `http://localhost:5000/addedProduct`
+        const url = `https://blueberry-custard-81521.herokuapp.com/addedProduct`
         fetch(url, {
             method: "POST",
             headers: {
@@ -56,7 +56,6 @@ const Checkout = () => {
                     </tr>
                 </tbody>
             </Table>
-            {/* <button onClick={handleCheckOut} className="checkoutBtn">Checkout</button> */}
             <Button onClick={handleCheckOut} className="float-right" variant="success">Checkout</Button>
         </div>
     );

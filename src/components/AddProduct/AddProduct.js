@@ -17,7 +17,7 @@ const AddProduct = () => {
             price: data.price,
             imageURL: imageURL
         };
-        const url = `http://localhost:5000/addItem`
+        const url = `https://blueberry-custard-81521.herokuapp.com/addItem`
 
         console.log(productData);
         fetch(url, {
